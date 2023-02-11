@@ -1,0 +1,12 @@
+<nest-nx-auth-button></nest-nx-auth-button>
+<div class="menu">
+    <a routerLink="/home" class="nav-link px-2 text-white fw-bold">Home </a>|
+    <a routerLink="/admin" class="nav-link px-2 text-white fw-bold">Admin </a> |
+    <a *ngIf="(user$ | async) === null" routerLink="/login">Login </a> |
+    <a *ngIf="user$ | async" (click)="logout()">Logout </a> 
+</div>
+
+<div class="main-content">
+    <router-outlet></router-outlet>
+</div>
+

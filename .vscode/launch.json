@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Nest Framework",
+            "args": [
+                "${workspaceFolder}/apps/nest-auth/src/main.ts"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register",
+                "-r",
+                "tsconfig-paths/register",
+                "--experimental-modules"
+            ],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "console": "integratedTerminal",
+            "resolveSourceMapLocations": [
+              "${workspaceFolder}/**",
+              "!**/node_modules/**" // Disable the "could not read source map" error for node_modules
+            ],
+            "env": {
+              "NODE_ENV": "local",
+              "NODE_PORT": "8000",
+              "TS_NODE_PROJECT": "${workspaceFolder}/apps/nest-auth/tsconfig.debug.json", // Specify the tsconfig to use. See content of it below.
+              "IS_DEBUG_MODE": "true" // Custom env variable to detect debug mode
+            }
+        }
+    ]
+  }
+  

@@ -1,0 +1,19 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: aquamarine;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 60px;
+}
